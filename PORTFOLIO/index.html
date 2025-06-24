@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>shivam | Portfolio</title>
+  <style>
+    :root {
+      --primary: #007BFF;
+      --dark: #31b3ff;
+      --light: #f9f9f9;
+      --text-light: #222;
+      --transition: 0.3s ease-in-out;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--light);
+      color: #111;
+    }
+
+    header {
+      background: var(--dark);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--text-light);
+    }
+
+    nav {
+      background: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: bold;
+      transition: var(--transition);
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    section {
+      padding: 4rem 10%;
+      background: white;
+      margin: 2rem auto;
+      max-width: 1200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      border-left: 5px solid var(--primary);
+      padding-left: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    #about p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .skill {
+      margin-bottom: 1.5rem;
+    }
+
+    .skill-name {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .skill-bar {
+      background: #ddd;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+    .skill-bar-fill {
+      height: 10px;
+      background: var(--primary);
+      width: 0%;
+    }
+
+    .skill-skill1   { animation: fillSkill1 2s forwards; }
+    .skill-skill2     { animation: fillSkill2 2s forwards; }
+    .skill-skill3  { animation: fillSkill3 2s forwards; }
+    .skill-skill4   { animation: fillSkill4 2s forwards; }
+    .skill-skill5 { animation: fillSkill5 2s forwards; }
+
+    @keyframes fillSkill1 {
+      to { width: 90%; }
+    }
+    @keyframes fillSkill2 {
+      to { width: 85%; }
+    }
+    @keyframes fillSkill3 {
+      to { width: 80%; }
+    }
+    @keyframes fillSkill4 {
+      to { width: 75%; }
+    }
+    @keyframes fillSkill5 {
+      to { width: 70%; }
+    }
+
+    .projects {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .project {
+      border: 1px solid #eee;
+      padding: 1rem;
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    form input, form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    form button:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #aaa;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Shivam</h1>
+    <p>Lorem ipsum dolor sit.</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet sequi sapiente animi ducimus, repellat rerum beatae magnam. Tempora non, ex, neque, provident dolorum reprehenderit corporis corrupti dolorem fuga soluta vitae.</p>
+  </section>
+
+  <section id="skills">
+    <h2 class="section-title">Skills</h2>
+    <div class="skill">
+      <div class="skill-name">Skill 1</div>
+      <div class="skill-bar">
+        <div class="skill-bar-fill skill-skill1"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Skill 2</div>
+      <div class="skill-bar">
+        <div class="skill-bar-fill skill-skill2"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Skill 3</div>
+      <div class="skill-bar">
+        <div class="skill-bar-fill skill-skill3"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Skill 4</div>
+      <div class="skill-bar">
+        <div class="skill-bar-fill skill-skill4"></div>
+      </div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Skill 5</div>
+      <div class="skill-bar">
+        <div class="skill-bar-fill skill-skill5"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>project 1</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ipsa odio magnam!</p>
+      </div>
+      <div class="project">
+        <h3>project 2</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ipsa odio magnam!</p>
+      </div>
+      <div class="project">
+        <h3>project 3</h3>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium ipsa odio magnam!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shivam. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
