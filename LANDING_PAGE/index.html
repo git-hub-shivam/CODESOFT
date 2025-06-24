@@ -76,7 +76,7 @@
 
     function typeEffect() {
       if (!isDeleting) {
-        // Typing phase
+        // Typing process
         element.textContent = name.slice(0, index + 1);
         index++;
 
@@ -94,7 +94,7 @@
         index--;
 
         if (index === 0) {
-          // Pause before typing again
+          // takes Pause before typing again
           isDeleting = false;
           setTimeout(typeEffect, 500);
           return;
